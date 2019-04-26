@@ -5,18 +5,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Landing Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+        }
+
+        #nav-bar {
+            background-color: white;
+            position: fixed;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            border-bottom: solid 1px black;
+            padding: 0.6rem;
+            z-index: 2;
+        }
+
+        #nav-bar a {
+            display: flex;
+            color: #0051ff;
+            text-decoration: none;
+            padding: 0 1rem;
+        }
+
+        #nav-bar #logo {
+            flex-grow: 1;
+        }
+
+        #header-img {
+            object-fit: cover;
+            width: 100%;
+            max-height: 100vh;
+        }
+
+        #hero {
+            position: relative;
+        }
+
+        #hero-overlay {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.2);
+            height: 100%;
+            width: 100%;
+        }
+
+        #hero-msg {
+            position: absolute;
+            left: 4rem;
+            bottom: 4rem;
+            z-index: 1;
+            color: white;
+        }
+
+        #hero-msg h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            transition: font-size 0.3s;
+        }
+
+        #hero-msg h1:hover {
+            font-size: 5rem;
+        }
+
+        #hero-msg p {
+            font-size: 2rem;
+            margin: 0;
+        }
+    </style>
 </head>
 
 <body>
     <header id="header">
         <nav id="nav-bar">
+            <span id="logo">Quality Masks</span>
             <a href="#form" class="nav-link">Link 1</a>
             <a href="#form" class="nav-link">Link 2</a>
             <a href="#video" class="nav-link">Link 3</a>
         </nav>
-        <img src="" alt="" id="header-img">
+        <div id="hero">
+            <div id="hero-overlay"></div>
+            <div id="hero-msg">
+                <h1>Quality Mask &trade;</h1>
+                <p>Made with quality. Only the best.</p>
+            </div>
+            <img src="images/sebastian-pena-lambarri-1218077-unsplash.jpg" alt="" id="header-img">
+        </div>
     </header>
     <section>
+        <h2>Introducing our latest product</h2>
         <video src="" id="video"></video>
     </section>
     <section>
